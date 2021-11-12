@@ -8,16 +8,9 @@ package other;
 public class Test {
     public static void main(String[] args) {
     System.out.println();
-
+    String  str="00001212";
+        System.out.println(str.replaceFirst("^0*",""));
     }
 
-    public static void InfoOut() {
-        for (int i = 0; i < 10; i++) {
-            for (int j = 0; j <= 64; j++) {
-                System.out.print(" * ");
-            }
-            System.out.println();
-        }
 
-    }
 }

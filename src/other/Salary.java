@@ -12,12 +12,5 @@ import java.util.Date;
 public class Salary {
     public static void main(String[] args) {
 
-        for (int i = 0; i < 30; i++) {
-            Date  date=new Date();
-            DateFormat SimpleDateFormat=new SimpleDateFormat("yyyyMMddHHmmSS");
-            System.out.println(SimpleDateFormat.format(date));
-        }
-
-        System.out.println(Math.ceil(123123.12312));
     }
 }

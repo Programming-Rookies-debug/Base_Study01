@@ -14,6 +14,7 @@ public class test001 {
 
     public  static int  getInt(){
         try {
+
             System.out.println(1/0);
         }catch (Exception e){
             System.out.println(e);
@@ -22,18 +23,6 @@ public class test001 {
             return  2;
         }
     }
-
-
-
-
-
-
-
-
-
-
-
-
 
     @Test
     public void get(){
@@ -55,10 +44,6 @@ public class test001 {
                 break;
         }
     }
-
-
-
-
 
 
 

@@ -5,11 +5,13 @@ package Proxy_静态代理;
  * @description 代理类
  * @date 2021/10/26
  */
-public class Proxy implements  Target{
-    private  Target target;
+public class Proxy implements Target {
+    private Target target;
+
     public Proxy(Target target) {
         this.target = target;
     }
+
     @Override
     public String execute() {
         System.out.println("perProcess");

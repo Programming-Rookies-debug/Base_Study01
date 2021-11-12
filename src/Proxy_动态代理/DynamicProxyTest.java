@@ -11,8 +11,8 @@ public class DynamicProxyTest {
     public static void main(String[] args) {
         Target target = new TargetImpl();
         DynamicProxyHandler handler = new DynamicProxyHandler(target);
-        Target proxySubject = (Target) Proxy.newProxyInstance(TargetImpl.class.getClassLoader(),TargetImpl.class.getInterfaces(),handler);
-        String result = proxySubject.execute();
+        Target proxySubject = (Target) Proxy.newProxyInstance(TargetImpl.class.getClassLoader(), TargetImpl.class.getInterfaces(), handler);
+        String result = proxySubject.update();
         System.out.println(result);
     }
 

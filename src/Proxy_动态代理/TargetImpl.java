@@ -11,4 +11,10 @@ public class TargetImpl implements  Target{
         System.out.println("TargetImpl execute！");
         return "execute";
     }
+
+    @Override
+    public String update() {
+        System.out.println("这是个update方法!!!");
+        return "update";
+    }
 }

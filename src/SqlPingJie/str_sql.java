@@ -8,11 +8,11 @@ package SqlPingJie;
 public class str_sql {
 
 
-    public  static  String   SplicingInsert(){
+    public  static StringBuffer SplicingInsert(){
         String str="insert into";
         String table="";
         StringBuffer  sql=new StringBuffer();
         sql.append("");
-        return null;
+        return sql;
     }
 }
