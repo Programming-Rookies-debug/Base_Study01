@@ -1,6 +1,6 @@
 package TimeStudy;
 
-import org.junit.Test;
+
 
 import java.util.Calendar;
 
@@ -23,11 +23,7 @@ public class TestTime {
         }
     }
 
-    @Test
-    public  void  getsomeThings(){
-        System.out.println("这是个测试的方法!");
 
-    }
 
 
 }

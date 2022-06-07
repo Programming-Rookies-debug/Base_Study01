@@ -6,12 +6,12 @@ import java.util.Random;
 /**
  * @author Sunpl
  * @description 快速排序
- * @date 2021/10/26
+ * @date 2021/10/26  2 200
  */
 public class SortNumber {
     public static void main(String[] args) {
         //获取随机数数组
-        int[] array = getArr(100,1000);
+        int[] array = getArr(10000,10000);
         System.out.println("原数组: " + Arrays.toString(array));
 
         System.out.println("选择排序");
@@ -60,17 +60,13 @@ public class SortNumber {
             gap /= 2;
         }
     }
-
-
     //归并排序
     public static void mergeSort(int[] array) {
         if (array == null || array.length <= 1) {
             return;
         }
-
         sort(array, 0, array.length - 1);
     }
-
     private static void sort(int[] array, int left, int right) {
         if (left == right) {
             return;
@@ -203,5 +199,18 @@ public class SortNumber {
             arr[i] = random.nextInt(bound);
         }
         return arr;
+    }
+
+    //数组去重
+    public  static   int[]  getNoArr(int[] arr){
+        int Arrlength =arr.length;
+        for (int i = 0; i < arr.length; i++) {
+            for (int j = 0; j < arr.length; j++) {
+                if (arr[i]==arr[j]){
+
+                }
+            }
+        }
+        return  arr;
     }
 }

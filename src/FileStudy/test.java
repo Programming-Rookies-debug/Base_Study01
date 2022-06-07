@@ -1,8 +1,4 @@
 package FileStudy;
-
-import com.sun.org.apache.bcel.internal.generic.I2F;
-import org.junit.Test;
-
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Random;
@@ -15,7 +11,7 @@ import java.util.Scanner;
  */
 public class test {
 
-    @Test
+
     public void math() {
         for (int i = 1; i < 10; i++) {
             for (int j = 1; j < 10; j++) {
@@ -30,7 +26,7 @@ public class test {
     }
 
 
-    @Test
+
     public void getMath() {
         int[] arr = new int[10];
         Random random = new Random();

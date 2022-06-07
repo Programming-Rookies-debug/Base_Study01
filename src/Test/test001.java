@@ -1,55 +1,23 @@
 package Test;
 
-import org.junit.Test;
+
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.*;
 
 public class test001 {
+    final static String  str="public";
+    final String  str2="prvicte";
+
+
     public static void main(String[] args) {
-        System.out.println(getInt());
+        String name="String";
+        String name2="name";
+       String  string= str +"  "+name+"  "+name2+";";
+        System.out.println(string);
 
     }
-
-    public  static int  getInt(){
-        try {
-
-            System.out.println(1/0);
-        }catch (Exception e){
-            System.out.println(e);
-            return 1;
-        }finally {
-            return  2;
-        }
-    }
-
-    @Test
-    public void get(){
-        switch (2){
-            case 1 : case 2: case 5: case 6:
-                try{
-                    System.out.println(1/0);
-                }catch (Exception e){
-                    System.out.println(e);
-                    break;
-
-                }finally {
-                    System.out.println("结束了!!");
-                }
-                System.out.println("1 and 2");
-                break;
-            case 3 : case 4:
-                System.out.println("3 and 4");
-                break;
-        }
-    }
-
-
-
-
-
-
 
     /**
      * 将字符串的月份开始天数和结束天数解析成日期格式

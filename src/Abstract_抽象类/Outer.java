@@ -11,6 +11,10 @@ import static javax.swing.text.html.HTML.Tag.SELECT;
  */
 public class Outer {
 
+    public static void main(String[] args) {
+        System.out.println(35964.42+81385.68+10800+12000);
+    }
+
     public  void   outer(){
         class  iner{
 
