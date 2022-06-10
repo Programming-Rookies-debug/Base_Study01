@@ -1,6 +1,7 @@
 package other;
 
 public enum Error {
+    error,warn
     ;
     private  String  errorCode;
     private  String  errorMsg;
@@ -20,4 +21,5 @@ public enum Error {
     public void setErrorMsg(String errorMsg) {
         this.errorMsg = errorMsg;
     }
+
 }
