@@ -13,10 +13,21 @@ import java.util.Scanner;
  * @date 2021/10/12
  */
 public class Recursion {
+    //单例构造
+    private static Recursion  instance;
+    //无参构造私有化
+    private Recursion(){
+
+    }
+    //提供实例获取方法
+    public Recursion  getInstance(){
+        if (instance==null){
+            instance=new Recursion();
+        }
+        return instance;
+    }
     //用户信息
     public  static HashMap<String,String>  UserInfoMap=new HashMap<>();
-    //管理员信息
-    public   static HashMap<String,String>  AdminInfoMap=new HashMap<>();
     //存放商品名称
     private static String[] CommodityArr={"手机","平板","电脑"};
     //商品属性
@@ -39,59 +50,85 @@ public class Recursion {
     //输入类
     Scanner  scanner=new Scanner(System.in);
    //
-    public Boolean flag=false;
+    public static Boolean Loginflag=false;
+
+    //循环模块
+    public void  start(){
+        while (Loginflag){
+
+        }
+    }
     //编写用户登录模块
     public  boolean  Login(){
 
-        System.out.println("欢迎登录系统!");
+        System.out.println("*************** 欢迎登录系统 !******************");
         System.out.println("请输入用户名:");
         userInfo.setUsername(scanner.next());
         System.out.println("请输入密码:");
         userInfo.setPassword(scanner.next());
+        //用户名和密码正确进入系统
         if (getUserInfo(userInfo)){
-            //
+            String id=scanner.next();
+            this.SelectPower(id);
+
         }else {
             System.out.println("用户名或密码错误!!");
         }
-        return  flag;
+        return  Loginflag;
     }
-    //判断是用户名和密码是否正确并且判断是否为管理员
-    public  Boolean  getUserInfo(UserInfo userInfo){
-        if (userInfo.getUsername() =="admin" && userInfo.getPassword()=="123456"){
-            System.out.println("欢迎你,管理员!!!");
-            return true ;
-        }
-        if(userInfo.getUsername() =="user" && userInfo.getPassword()=="123456"){
-            System.out.println("欢迎你,亲爱的客户!!!");
-            return true ;
-        }
-        return false ;
-    }
-
-    public static void main(String[] args) {
-        showCommodityInfo();
-    }
-    //展示商品
-    public  static  void showCommodityInfo(){
+    //数据初识化
+    private static void initData(){
         //添加用户信息
         UserInfoMap.put("user","123456");
-//        //添加管理员信息
-        AdminInfoMap.put("admin","123456");
         //存放商品名称
         for (int i = 0; i < CommodityArr.length; i++) {
             if (CommodityArr[i]=="手机"){
 
             }
         }
+    }
 
+    //判断是用户名和密码是否正确并且判断是否为管理员
+    public  Boolean  getUserInfo(UserInfo userInfo){
+        if(userInfo.getUsername() =="user" && userInfo.getPassword()=="123456"){
+            System.out.println("欢迎你,亲爱的客户!!!");
+            return true ;
+        }
+        return false ;
+    }
+    //展示商品
+    public  static  void showCommodityInfo(){
 
     }
 
-    //数据初识化
-    private static void initData(){
+    //用户功能选择
+    public void  SelectPower(String  id){
+
+        switch (id){
+            //查看库存
+            case "1":
+                showCommodityInfo();
+                break;
+            //添加库存
+            case "2":
+
+                break;
+            //修改库存
+            case "3":
+
+                break;
+            //删除库存
+            case "4":
+
+                break;
+            default:
+                System.out.println("指令输入有误,请重新输入");
+        }
+    }
+    //信息确认
+    public void  showWorning(){
 
     }
-
 
 
 
